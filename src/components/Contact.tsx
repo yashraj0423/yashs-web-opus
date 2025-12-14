@@ -116,7 +116,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-muted-foreground text-sm">BIT Mesra, Ranchi, India</p>
+                  <p className="text-muted-foreground text-sm">Jamshedpur, Jharkhand, India</p>
                 </div>
               </div>
 
