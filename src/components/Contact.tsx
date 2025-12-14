@@ -57,7 +57,7 @@ export const Contact = () => {
     },
     {
       name: "Email",
-      href: "mailto:yash@example.com",
+      href: "mailto:yashraj348@gmail.com",
       icon: Mail,
       color: "hover:text-red-500",
     },
@@ -113,7 +113,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground text-sm">yash@example.com</p>
+                  <p className="text-muted-foreground text-sm">yashraj348@gmail.com</p>
                 </div>
               </div>
             </div>
