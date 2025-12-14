@@ -15,29 +15,42 @@ export const ThemeToggle = () => {
   }, [isDark]);
 
   useEffect(() => {
-    // Default to dark mode
     window.document.documentElement.classList.add("dark");
   }, []);
 
   return (
     <motion.button
       whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.9 }}
       onClick={() => setIsDark(!isDark)}
-      className="relative p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+      className="relative w-10 h-10 rounded-xl bg-secondary/80 backdrop-blur-sm border border-border/50 flex items-center justify-center group overflow-hidden"
       aria-label="Toggle theme"
     >
       <motion.div
         initial={false}
-        animate={{ rotate: isDark ? 0 : 180 }}
+        animate={{ 
+          rotate: isDark ? 0 : 180,
+          scale: isDark ? 1 : 0 
+        }}
         transition={{ duration: 0.3 }}
+        className="absolute"
       >
-        {isDark ? (
-          <Moon className="w-5 h-5 text-primary" />
-        ) : (
-          <Sun className="w-5 h-5 text-primary" />
-        )}
+        <Moon className="w-4 h-4 text-primary" />
       </motion.div>
+      <motion.div
+        initial={false}
+        animate={{ 
+          rotate: isDark ? -180 : 0,
+          scale: isDark ? 0 : 1 
+        }}
+        transition={{ duration: 0.3 }}
+        className="absolute"
+      >
+        <Sun className="w-4 h-4 text-accent" />
+      </motion.div>
+      
+      {/* Hover glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.button>
   );
 };
