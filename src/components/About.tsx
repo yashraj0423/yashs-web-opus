@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, Briefcase, Code, Download } from "lucide-react";
+import { GraduationCap, Briefcase, Code } from "lucide-react";
 
 const highlights = [
   {
@@ -65,16 +65,6 @@ export const About = () => {
               contributing to open-source projects, or sharing knowledge with 
               the developer community.
             </p>
-
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium mt-4"
-            >
-              <Download size={20} />
-              Download Resume
-            </motion.a>
           </motion.div>
 
           {/* Highlight Cards */}
