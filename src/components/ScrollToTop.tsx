@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, MessageCircle } from "lucide-react";
 
 export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,17 +24,32 @@ export const ScrollToTop = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-lg glow z-40"
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 20, scale: 0.8 }}
+          className="fixed bottom-8 right-8 z-40 flex flex-col gap-3"
         >
-          <ArrowUp size={24} />
-        </motion.button>
+          {/* Contact quick action */}
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-12 h-12 bg-accent text-accent-foreground rounded-2xl flex items-center justify-center shadow-lg shadow-accent/25"
+          >
+            <MessageCircle size={22} />
+          </motion.a>
+
+          {/* Scroll to top */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollToTop}
+            className="w-12 h-12 bg-gradient-to-br from-primary to-accent text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg shadow-primary/25"
+          >
+            <ArrowUp size={22} />
+          </motion.button>
+        </motion.div>
       )}
     </AnimatePresence>
   );
