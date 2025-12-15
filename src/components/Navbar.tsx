@@ -50,22 +50,76 @@ export const Navbar = () => {
           {/* Logo */}
           <motion.a
             href="#"
-            className="relative group flex items-center gap-2"
-            whileHover={{ scale: 1.05 }}
+            className="relative group flex items-center gap-3"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
+            {/* Logo Icon Container */}
             <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center font-bold text-lg text-primary-foreground">
-                Y
-              </div>
+              {/* Animated glow ring */}
               <motion.div
-                className="absolute -inset-1 rounded-xl bg-gradient-to-br from-primary to-accent opacity-0 group-hover:opacity-50 blur-lg transition-opacity"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                className="absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: "linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))",
+                  filter: "blur(8px)",
+                }}
+                animate={{ 
+                  rotate: [0, 360],
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{ 
+                  rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                }}
+              />
+              
+              {/* Main logo box */}
+              <div className="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-accent flex items-center justify-center overflow-hidden shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-shadow duration-300">
+                {/* Inner shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-transparent" />
+                
+                {/* Animated shimmer */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "200%" }}
+                  transition={{ 
+                    duration: 2.5, 
+                    repeat: Infinity, 
+                    repeatDelay: 3,
+                    ease: "easeInOut"
+                  }}
+                />
+                
+                {/* Y letter */}
+                <span className="relative font-bold text-xl text-primary-foreground tracking-tight">
+                  Y
+                </span>
+              </div>
+              
+              {/* Floating dot indicator */}
+              <motion.div
+                className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-accent border-2 border-background shadow-lg shadow-accent/50"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{ 
+                  duration: 2, 
+                  repeat: Infinity, 
+                  ease: "easeInOut"
+                }}
               />
             </div>
-            <span className="font-bold text-xl hidden sm:block">
-              Yash<span className="text-primary">.</span>
-            </span>
+            
+            {/* Text Logo */}
+            <div className="hidden sm:flex flex-col">
+              <span className="font-bold text-xl tracking-tight leading-none">
+                Yash<span className="text-accent">.</span>
+              </span>
+              <span className="text-[10px] font-medium text-muted-foreground tracking-wider uppercase">
+                Developer
+              </span>
+            </div>
           </motion.a>
 
           {/* Desktop Navigation */}
