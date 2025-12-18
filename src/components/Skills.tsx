@@ -7,10 +7,18 @@ const skillCategories = [
     title: "Languages",
     color: "from-violet-500 to-purple-600",
     skills: [
-      { name: "JavaScript", level: 85 },
       { name: "C++", level: 80 },
       { name: "Java", level: 75 },
       { name: "Python", level: 70 },
+    ],
+  },
+  {
+    title: "Core Skills (DSA)",
+    color: "from-amber-500 to-orange-600",
+    skills: [
+      { name: "Data Structures", level: 80 },
+      { name: "Algorithms", level: 78 },
+      { name: "Problem Solving", level: 82 },
     ],
   },
   {
@@ -18,9 +26,9 @@ const skillCategories = [
     color: "from-cyan-500 to-blue-600",
     skills: [
       { name: "React.js", level: 85 },
+      { name: "JavaScript", level: 85 },
       { name: "HTML/CSS", level: 90 },
       { name: "Bootstrap", level: 85 },
-      { name: "MUI", level: 80 },
     ],
   },
   {
@@ -34,7 +42,7 @@ const skillCategories = [
   },
   {
     title: "Database",
-    color: "from-orange-500 to-red-600",
+    color: "from-pink-500 to-rose-600",
     skills: [
       { name: "MongoDB", level: 80 },
       { name: "SQL", level: 75 },
