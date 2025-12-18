@@ -6,22 +6,34 @@ const experiences = [
   {
     title: "Web Development Intern",
     company: "Omnisciento IT Services",
-    period: "2024",
+    period: "Jun 2025 – Present",
     location: "Remote",
     description: [
-      "Developed and maintained full-stack web applications using the MERN stack",
-      "Collaborated with cross-functional teams to deliver client projects on time",
-      "Implemented responsive UI components using React and Material UI",
-      "Optimized application performance and improved user experience",
+      "Collaborated with business and development teams to gather requirements and translate them into technical solutions",
+      "Assisted in building front-end features in React (forms, lists, basic state) and fixing UI issues for mobile/desktop",
+      "Contributed to back-end routes in Node/Express and simple MongoDB/Mongoose CRUD operations",
+      "Conducted data validation and process documentation, improving workflow clarity",
     ],
-    techStack: ["React", "Node.js", "MongoDB", "Express.js", "MUI"],
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Git", "Responsive UI"],
+  },
+  {
+    title: "Vocational Trainee – Web Development",
+    company: "Tata Steel Ltd., Jamshedpur",
+    period: "May 2023 – Jun 2023",
+    location: "Jamshedpur",
+    description: [
+      "Completed a vocational training program under the Learning & Development department",
+      "Learned core web development concepts including HTML, CSS, JavaScript and basic backend flow",
+      "Worked on designing simple responsive web pages and improving UI structure",
+    ],
+    techStack: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
 const achievements = [
   {
     title: "Tata Steel Adventure Camp",
-    description: "Demonstrated leadership and teamwork skills in challenging outdoor activities. Developed problem-solving abilities through adventure-based learning.",
+    description: "Led a team to victory, demonstrating strong leadership, strategic planning, and teamwork skills to achieve success in competitive outdoor challenges.",
     icon: Trophy,
   },
 ];
