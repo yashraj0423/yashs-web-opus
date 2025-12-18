@@ -6,7 +6,7 @@ const highlights = [
   {
     icon: GraduationCap,
     title: "MCA Student",
-    description: "Currently pursuing MCA at BIT Mesra, one of India's premier technical institutions.",
+    description: "Pursuing MCA at BIT Mesra (CGPA: 8.06), one of India's premier technical institutions.",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
@@ -18,15 +18,15 @@ const highlights = [
   {
     icon: Code,
     title: "Full Stack Focus",
-    description: "Specialized in MERN stack, creating end-to-end solutions for complex problems.",
+    description: "Specialized in MERN stack with knowledge of DSA, Algorithms, and Business Tools.",
     gradient: "from-orange-500 to-red-500",
   },
 ];
 
 const stats = [
-  { value: "3+", label: "Projects Completed" },
-  { value: "5+", label: "Technologies" },
-  { value: "1+", label: "Years Learning" },
+  { value: "2+", label: "Projects Completed" },
+  { value: "10+", label: "Technologies" },
+  { value: "2+", label: "Years Learning" },
 ];
 
 export const About = () => {
