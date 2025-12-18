@@ -40,15 +40,6 @@ const skillCategories = [
       { name: "SQL", level: 75 },
     ],
   },
-  {
-    title: "Tools & Others",
-    color: "from-pink-500 to-rose-600",
-    skills: [
-      { name: "Git", level: 85 },
-      { name: "Power BI", level: 70 },
-      { name: "MS Excel", level: 75 },
-    ],
-  },
 ];
 
 const SkillBar = ({ name, level, delay, color }: { name: string; level: number; delay: number; color: string }) => {
